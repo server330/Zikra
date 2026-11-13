@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>مفاجأة خاصة لـ ذكرى 🎁✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #ffd6e0 0%, #ffef9f 50%, #c8e7ff 100%);
+            background-size: 400% 400%;
+            animation: gradientBG 12s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            overflow: hidden;
+            color: #4a2c40;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* إطارات النوافذ الكلاسيكية اللطيفة */
+        .window-box {
+            background: #fff9fb;
+            border: 3px solid #5c3a4d;
+            border-radius: 18px;
+            box-shadow: 8px 8px 0px #5c3a4d;
+            width: 100%;
+            max-width: 420px;
+            overflow: hidden;
+            animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+
+        @keyframes popIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .window-header {
+            background: #ffb3c6;
+            border-bottom: 3px solid #5c3a4d;
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 900;
+            font-size: 0.95rem;
+        }
+
+        .window-dots {
+            display: flex;
+            gap: 6px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 2px solid #5c3a4d;
+            background: #fff;
+        }
+        .dot.pink { background: #ff4d6d; }
+        .dot.yellow { background: #ffd166; }
+
+        .window-content {
+            padding: 30px 22px;
+            text-align: center;
+        }
+
+        /* إخفاء المراحل غير
