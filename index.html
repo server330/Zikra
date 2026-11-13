@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كل عام وأنتِ بخير يا ذكرى ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a0b2e 0%, #3b1443 50%, #12051c 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #fff;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* خلفية قلوب ونجوم جمالية */
+        .bg-hearts {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .heart {
+            position: absolute;
+            color: rgba(255, 182, 193, 0.2);
+            font-size: 20px;
+            animation: float 6s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-10vh) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        .card {
+            position: relative;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 30px;
+            width: 100%;
+            max-width: 500px;
+            padding: 40px 30px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .cake-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            background: linear-gradient(90deg, #ff758c, #ff7eb3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #f3c6ff;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .message-box {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 117, 140, 0.3);
+            border-radius: 20px;
+            padding: 22px;
+            margin-bottom: 25px;
+            line-height: 1.9;
+            font-size: 1.05rem;
+            color: #f1f5f9;
+            text-align: right;
+        }
+
+        .message-box span {
+            color: #ff758c;
+            font-weight: 700;
+        }
+
+        .signature {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            font-weight: 700;
+            margin-top: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .signature span {
+            color: #38bdf8;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- خلفية تفاعلية للقلوب -->
+    <div class="bg-hearts" id="heartsContainer"></div>
+
+    <div class="card">
+        <div class="cake-icon">🎂</div>
+        <h1>كل عام وأنتِ بخير</h1>
+        <div class="subtitle">أغلى وأحن أخت في الدنيا (ذكرى)</div>
+
+        <div class="message-box">
+            أختي الصغرى وصديقتي وقطعة من قلبي <span>ذكرى عمر نمر</span>،<br><br>
+            اليوم ليس كأي يوم، اليوم هو ميلاد أجمل وألطف إنسانة أنارت حياتنا. أود اليوم أن أخبركِ كم أنا ممتن وجودكِ بجانبي، وكم أتمنى أن تكوني دائماً أعدس السعادة وأغلى ما أملك.<br><br>
+            كل سنة وأنتِ أقرب إلى الله، وأحلى وأنجح البنات، وعقبال 100 سنة مليئة بالفرح والأحلام المحققة يا رب! ❤️✨
+        </div>
+
+        <div class="signature">
+            من أخيك المحب دائمًا: <span>عمر الجوكس</span>
+        </div>
+    </div>
+
+    <script>
+        // سكريبت لتوليد قلوب متحركة في الخلفية لإعطاء لمسة إبداعية
+        const container = document.getElementById('heartsContainer');
+        const symbols = ['❤️', '✨', '💖', '⭐', '🌸'];
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
+            heart.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+            container.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 6000);
+        }
+
+        setInterval(createHeart, 400);
+    </script>
+
+</body>
+</html>
